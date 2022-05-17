@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#ECECEC"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:gravity="bottom"
+        android:paddingBottom="9dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/botonConvertir"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:scaleType="centerInside"
+            android:paddingBottom="4dp"
+            app:srcCompat="@drawable/ic_send"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/btStt"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:layout_toLeftOf="@+id/botonConvertir"
+            app:srcCompat="@drawable/ic_micro" />
+
+        <EditText
+            android:background="@drawable/background"
+            android:textColorHint="#A1A1A1"
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:hint="Escribe tu mensaje..."
+            android:layout_toLeftOf="@id/btStt"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contenedor">
+
+        <LinearLayout
+            android:id="@+id/linear_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
